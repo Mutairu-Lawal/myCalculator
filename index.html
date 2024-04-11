@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquery.css" />
+    <title>My Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <input type="text" class="showDisplay" placeholder="0" readonly />
+      </div>
+      <div class="buttons">
+        <div class="btns row1">
+          <button class="js-delete-button">Del</button>
+          <button class="js-resetBtn" onclick=" resetBtn()">
+            <p>C</p>
+          </button>
+          <button class="percentageBtn" onclick="percentageBtn()">
+            <p>%</p>
+          </button>
+
+          <button onclick="getCalculation(`-`)">
+            <p>&minus;</p>
+          </button>
+        </div>
+        <div class="btns row2">
+          <button onclick="getCalculation('7')">
+            <p>7</p>
+          </button>
+          <button onclick="getCalculation('8')">
+            <p>8</p>
+          </button>
+          <button onclick="getCalculation('9')">
+            <p>9</p>
+          </button>
+          <button onclick="getCalculation(`/`)">
+            <p>&div;</p>
+          </button>
+        </div>
+        <div class="btns row3">
+          <button onclick="getCalculation('4')">
+            <p>4</p>
+          </button>
+          <button onclick="getCalculation('5')">
+            <p>5</p>
+          </button>
+          <button onclick="getCalculation('6')">
+            <p>6</p>
+          </button>
+          <button onclick="getCalculation(`*`)">
+            <p>&times;</p>
+          </button>
+        </div>
+        <div class="btns row4">
+          <button onclick="getCalculation('1')">
+            <p>1</p>
+          </button>
+          <button onclick="getCalculation('2')">
+            <p>2</p>
+          </button>
+          <button onclick="getCalculation('3')">
+            <p>3</p>
+          </button>
+          <button onclick="getCalculation(`+`)">
+            <p>&plus;</p>
+          </button>
+        </div>
+        <div class="btns row5">
+          <button onclick="getCalculation(`00`)">
+            <p>00</p>
+          </button>
+          <button>
+            <p onclick="getCalculation('0')">0</p>
+          </button>
+          <button onclick="getCalculation(`.`)">
+            <p>&middot;</p>
+          </button>
+
+          <button id="equalBtn" onclick="updateCalculation()">
+            <p>&equals;</p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="cal.js"></script>
+  </body>
+</html>
